@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Maquetación ejemplo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script defer type="module" src='index.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+
+        <section class="logo">
+            <img src="logo.png" alt="placeholder image" class="image logo">
+        </section>
+
+        <nav class="navigation">
+
+            <ul class="navigation-list">
+
+                <li class="navigation-item">
+
+                    <a href="#" class="navigation-link">
+                        Inicio
+                    </a>
+
+                </li>
+
+                <li class="navigation-item">
+
+                    <a href="#" class="navigation-link">
+                        Preguntas destacadas
+                    </a>
+
+                </li>
+
+
+                <li class="navigation-item">
+
+                    <img src="https://ui-avatars.com/api/?name=J+M&background=0D8ABC&color=fff&size=48" alt=""
+                        class="avatar">
+
+                </li>
+
+                <li class="navigation-item">
+
+                    <i class="options fas fa-angle-down" id="options"></i>
+
+                    <section id="user-modal" data-visible="false" class="user-options">
+
+                        <p class="user-option">
+                            Ajustes
+                        </p>
+
+                        <p class="user-option">
+                            Cerrar sesión
+                        </p>
+
+                    </section>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <h1 class="page-title">
+        Preguntas recientes
+    </h1>
+
+    <main class="questions-container" id="wrapper">
+
+    </main>
+
+</body>
+
+</html>

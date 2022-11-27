@@ -1,91 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/favicon.ico"/>
-  <link rel="apple-touch-icon" href="assets/favicon.ico"/>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
-  <title>Welcome to NEAR</title>
-  <link rel="stylesheet" href="assets/global.css">
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Maquetación ejemplo</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script defer type="module" src='index.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-  <main id="signed-out-flow" style="display: none">
-    <h1>
-      The contract says: <span class="greeting" data-behavior="greeting"></span>
-    </h1>
-    <h3>
-      Welcome to NEAR!
-    </h3>
-    <p>
-      Your contract is storing a greeting message in the NEAR blockchain. To
-      change it you need to sign in using the NEAR Wallet. It is very simple,
-      just use the button below.
-    </p>
-    <p>
-      Do not worry, this app runs in the test network ("testnet"). It works
-      just like the main network ("mainnet"), but using NEAR Tokens that are
-      only for testing!
-    </p>
-    <p style="text-align: center; margin-top: 2.5em">
-      <button id="sign-in-button">Sign in with NEAR Wallet</button>
-    </p>
+  <header class="header">
+
+    <section class="logo">
+      <img src="logo.png" alt="placeholder image" class="image logo">
+    </section>
+
+    <nav class="navigation">
+
+      <ul class="navigation-list">
+
+        <li class="navigation-item">
+
+          <a href="#" class="navigation-link">
+            Inicio
+          </a>
+
+        </li>
+
+        <li class="navigation-item">
+
+          <a href="#" class="navigation-link">
+            Preguntas destacadas
+          </a>
+
+        </li>
+
+
+        <li class="navigation-item">
+
+          <img src="https://ui-avatars.com/api/?name=J+M&background=0D8ABC&color=fff&size=48" alt="" class="avatar">
+
+        </li>
+
+        <li class="navigation-item">
+
+          <i class="options fas fa-angle-down" id="options"></i>
+
+          <section id="user-modal" data-visible="false" class="user-options">
+
+            <p class="user-option">
+              Ajustes
+            </p>
+
+            <p class="user-option">
+              Cerrar sesión
+            </p>
+
+          </section>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <h1 class="page-title">
+    Preguntas recientes
+  </h1>
+
+  <main class="questions-container" id="wrapper">
 
   </main>
 
-  <div id="signed-in-flow" style="display: none">
-    <button style="float: right" id="sign-out-button">
-      Sign out <span data-behavior="account-id"></span>
-    </button>
-    <main>
-      <h1>
-        The contract says: <span class="greeting" data-behavior="greeting"></span>
-      </h1>
-      <form class="change">
-        <label for="greeting">Change greeting:</label>
-        <div>
-          <input
-                  autocomplete="off"
-                  id="greeting"
-                  data-behavior="greeting"
-          />
-          <button>
-            <span>Save</span>
-            <div class="loader"></div>
-          </button>
-        </div>
-      </form>
-      <p>
-        Look at that! A Hello World app! This greeting is stored on the NEAR blockchain. Check it out:
-      </p>
-      <ol>
-        <li>
-          Look in <code>index.js</code> and <code>near-api.js</code> – you'll see <code>get_greeting</code>
-          and <code>set_greeting</code> being called on <code>contract</code>.
-          What's this?
-        </li>
-        <li>
-          Ultimately, this <code>contract</code> code is defined in
-          <code>assembly/index.ts</code> – this is the source code for your
-          <a target="_blank" href="https://docs.near.org/docs/develop/contracts/overview">smart contract</a>.
-        </li>
-        <li>
-          When you run <code>npm run dev</code>, the code in
-          <code>assembly/index.ts</code> gets deployed to the NEAR testnet. You
-          can see how this happens by looking in <code>package.json</code> at the
-          <code>scripts</code> section to find the <code>dev</code> command.
-        </li>
-      </ol>
-      <hr>
-      <p>
-        To keep learning, check out
-        <a target="_blank" href="https://docs.near.org">the NEAR docs</a>
-        or look through some
-        <a target="_blank" href="https://examples.near.org">example apps</a>.
-      </p>
-    </main>
-  </div>
-
-  <script src="index.js" type="module"></script>
 </body>
+
 </html>
